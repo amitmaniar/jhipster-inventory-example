@@ -19,6 +19,10 @@ import category, {
 import vendor, {
   VendorState
 } from 'app/entities/vendor/vendor.reducer';
+// prettier-ignore
+import product, {
+  ProductState
+} from 'app/entities/product/product.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -33,6 +37,7 @@ export interface IRootState {
   readonly settings: SettingsState;
   readonly category: CategoryState;
   readonly vendor: VendorState;
+  readonly product: ProductState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -49,6 +54,7 @@ const rootReducer = combineReducers<IRootState>({
   settings,
   category,
   vendor,
+  product,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
